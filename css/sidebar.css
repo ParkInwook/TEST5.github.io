@@ -1,0 +1,49 @@
+
+.menu {position: sticky; top: 70px; z-index: 5; background-color: white; width:100%;}
+.menuBtn {display: none;}
+
+.menu .category {display: block;}
+
+.category li {margin-left: 10px;}
+.category li a {color: #263238; text-decoration: none;}
+.category li a:hover {color: red;}
+
+@media (max-width: 767px) {
+    /* 모바일 사이드메뉴 */
+    .menu {
+    display: block;
+    height: 100%;
+    width: 0px; /* 기존0으로 보이지 않는다*/
+    position: fixed;
+    z-index: 20;
+    top: 50px;
+    left: 0;
+    background-color: #f1f1f1;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    }
+    /* 모바일시 사이드메뉴 버튼 */
+    .menuBtn {
+    position: fixed;
+    width: 60px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    left: 0px;
+    top: 0px;
+    z-index: 20; 
+    display: inline-block;
+    background-color: #263238;
+    color: #f1f1f1;
+    cursor: pointer;
+    }
+    /* 모바일 일때 넓이 고정 */
+    .menu .category {
+        width: 220px;
+    }
+}
+.menuToggle { overflow: auto; width: 250px; } /* 토글형식의 클래스(반드시 최하단에 존재해야함) */
+
+/* 좌측메뉴 슬라이드 */
+.content {height: 0px; overflow: hidden; /* transition: all .4s ;  */ }
+.content-open {height: auto; display: block; /* 트랜지션은 높이를 고정값으로 */ }

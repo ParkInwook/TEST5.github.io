@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>페이스북</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!--개인 디자인 추가-->
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/bootstrap.js"></script>
+
+    <style type="text/css">
+        section {
+            margin-top: 70px;
+        }
+        .fileDiv {
+	        display:none;
+	
+        }
+		
+    </style>
+
+</head>
+
+<body>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <aside class="col-sm-3 aside-facebook">
+			            <div class="menu1">
+                            <p><img src="img/profile.png" width="50" alt="프로필">박인욱</p>
+                            <ul>
+                                <li>뉴스피드</li>
+                                <li>메신저</li>
+                                <li>watch동영상</li>
+                            </ul>
+			            </div>
+                        <div class="menu2">
+                            <p>둘러보기</p>
+                            <ul>
+                                <li>기부 캠페인</li>
+                                <li>페이지</li>
+                                <li>그룹</li>
+                                <li>이벤트</li>
+                                <li>친구리스트</li>
+                            </ul>
+                        </div>
+                </aside>
+                <div class="col-xs-12 col-sm-7 section-facebook">
+					<h4>게시글을 등록하세요</h4>
+					
+                    <!-- 파일 업로드 폼입니다 -->
+					<div class="fileDiv">
+						<img id="fileImg" src="#">
+					</div>
+					<div class="reply-content" >
+						<textarea class="form-control" rows="3" name="content" id="content"></textarea>
+						<div class="reply-group">
+							<div class="filebox pull-left">
+								<button type="button" class="right btn btn-info">이미지로드</button>
+							</div>
+							<button type="button" class="right btn btn-info" id="uploadBtn">등록하기</button>
+						</div>
+					</div>
+					<!-- 파일 업로드 폼 끝 -->
+
+                    
+                    <div class="facebook-wrap">
+                        <div class="title-inner"><!--제목영역-->
+                        <div class="profile"><img src="img/profile.png" width="50" alt="프로필"></div>
+                            <div class="title">
+                                <p>테스트</p>
+                                <small>21시간</small>
+                            </div>
+                        </div>
+                        <div class="content-inner">
+                            <!--내용영역-->
+                            <p>삶이 우리를 끝없이 시험하기에 고어텍스는 한계를 테스트합니다</p>
+                        </div>
+                        <div class="image-inner"><!-- 이미지영역 -->
+                            <img src="img/facebook.jpg" alt="이미지">
+                        </div>
+                        <div class="like-inner"><!--좋아요-->
+                            <a>
+                                <img src="img/like.png"  width="30"  alt="좋아요">
+                                <span>522</span>
+                            </a>
+                        </div>
+                        <div class="button-inner">
+                            <a href="#"><span><i class="glyphicon glyphicon-thumbs-up"></i>좋아요</span></a>
+                            <a href="#"><span><i class="glyphicon glyphicon-comment"></i>댓글달기</span></a>
+                            <a href="#"><span><i class="glyphicon glyphicon-share-alt"></i>공유하기</span></a>
+                        </div>
+
+                    </div>
+                  
+                </div>
+
+
+                <!--우측 어사이드-->
+                <aside class="col-sm-2 aside-facebook">
+                    <div class="aside-inner">
+			            <div class="menu1">
+                            <p>목록</p>
+                            <ul>
+                                <li>목록1</li>
+                                <li>목록2</li>
+                                <li>목록3</li>
+                                <li>목록4</li>
+                                <li>목록5</li>
+                            </ul>
+			            </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    
+
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+﻿        /*=========웹폰트 선언=========*/
+        @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+        /*===========================*/
+        
+        /*디자인 시작시 기본 선언*/
+        *{  /* 기본선언: 마딩, 패딩 0, 요소크기에 padding, border값을 포함 x*/
+            padding:0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        body, html {
+            width: 100%;
+            min-width: 320px;
+            font-family:'Noto Sans KR', sans-serif; /*웹폰트 사용*/
+        }
+        
+        img {
+            max-width: 100%; /*사이즈가 변해도 넓이를 유지 */
+            height: auto; /*사이즈가 변해도 높이를 유지 */
+            /*vertical-align: top;*/
+        }
+        input, textarea, button, select { /*고유하게 적용되어있는 form관련 요소들을 제거해서 여러브라우저에서 동일한디자인을 얻게함*/
+            -webkit-appearance:none;
+            -moz-appearance:none;
+            appearance:none;
+            border:none
+        }
+        ul, ol, dl, li {
+                list-style:none; /*순서 요소들이 리스트스타일을 업앤다 */
+        }        
+        .btn {
+            border-radius : 0px;
+        }
+
+
+        /*=======댓글========*/
+        .reply-wrap {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border: 1px solid #ddd;
+            position: relative; /*부모에 relative*/
+
+        }
+        .reply-wrap .reply-image {
+            position: absolute; /*자식에서 absolute로 부모요소 위치로 조정*/
+            left: 15px;
+            top: 15px;
+        }
+        .reply-wrap .reply-content {
+            padding-left:60px;
+        }
+        /*부트스트랩의 form-control 조정 */
+        .reply-content > .form-control {
+            resize: vertical;/*세로로만 조정가능*/
+            width: 100%; /*최대 100%*/
+            min-height: 80px; /*최대 넓이*/
+            margin-bottom: 10px;
+        }
+        .reply-input > .form-control {
+            width: 200px;
+            margin-bottom: 5px;
+        }
+        .reply-group {
+            overflow: hidden;
+        }
+        .reply-input {
+            float: left;
+        }
+        .reply-group .right {
+        	float: right;
+        }
+        /*댓글 영역*/
+        .reply-group small {
+        	margin-left: 10px;
+        	height: 20px;
+        	line-height: 20px;
+        }
+        .reply-group small, 
+        .reply-group strong {
+            float : left;
+        }   
+        .reply-group a {
+            text-decoration: none;
+            color: #777;
+            float: right;
+        }      
+        
+        /*서서히 보이기 */
+        .reply-content textarea {
+            height: 50px;
+            transition: height .4s ease-in-out;
+            
+        }
+        .reply-content textarea:focus {
+            height: 150px;
+
+        }
+
+/* ========페이스북 그리드========== */
+.section-facebook {
+    border-right: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+}
+
+.facebook-wrap {
+    margin-top: 10px;
+}
+
+.title-inner {position: relative;} /* 부모영역 */
+.title-inner .profile {
+    position: absolute;
+    left:0;
+    top:0;
+}
+.title-inner .title {
+    padding-left: 60px;
+}
+
+.content-inner {
+    padding: 10px 0; /* 위아래 10, 좌우 0 */
+}
+
+.like-inner, 
+.button-inner {/* 상자 위 윤곽 */
+    border-top: 1px solid #cccccc;
+}
+.like-inner {
+    margin-top: 10px;
+}
+.like-inner a {
+    text-decoration: none;
+    color: black;
+}
+.like-inner span {
+    vertical-align: middle;
+}
+.button-inner { /* 버튼 영역 */
+    overflow: hidden;
+}
+.button-inner a {
+    float: left;
+    width: 33.3333%;
+    text-align: center;
+    color: black;
+    padding: 10px 0;
+    border-bottom: 1px solid #cccccc;
+}
+.button-inner i {
+    margin: 0 5px; /* 위아래0 좌우5 */
+}
+/* 좌측 메뉴 xs에서 안보이도록 */
+@media (max-width:767px) {
+    .aside-facebook {
+        display: none;
+    }
+}
+
+
+ 
